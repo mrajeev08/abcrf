@@ -1,3 +1,4 @@
+
 out.abcrf <- function(x, training, obs = NULL, n.var = 20,
                          predict_ntree = 100, 
                          return_predict = TRUE, ...) {
@@ -50,7 +51,7 @@ out.abcrf <- function(x, training, obs = NULL, n.var = 20,
       projobs <- predict(x$model.lda, obs)$x
       
       preds <- predict(x, obs, training, ntree = predict_ntree)
-      observed <- data.table(projobs, 
+      observed <- data.table::data.table(projobs, 
                              modindex =  preds$allocation,
                              type = "observed")
   

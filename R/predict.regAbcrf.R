@@ -1,5 +1,7 @@
 predict.regAbcrf <- function(object, obs, training, quantiles=c(0.025,0.975),
-                             paral = FALSE, ncores = if(paral) max(detectCores()-1,1) else 1, rf.weights = FALSE,
+                             paral = FALSE, 
+                             ncores = if(paral) max(detectCores()-1,1) else 1, 
+                             rf.weights = FALSE,
                              post.err.med = FALSE, ...)
 {
   ### Checking arguments

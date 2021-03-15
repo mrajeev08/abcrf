@@ -82,7 +82,7 @@ out.regAbcrf <-
 
     priorDensity <- density(resp)
     
-    data.table(resp, weights.std)
+    data.table::data.table(resp, weights.std)
     
 } 
 
