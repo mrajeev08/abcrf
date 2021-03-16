@@ -72,6 +72,3 @@ out.abcrf <- function(x, training, obs = NULL, n.var = 20,
   }
   
 }
-
-out <-
-  function(...) UseMethod("out")
