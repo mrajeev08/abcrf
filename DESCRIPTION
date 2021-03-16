@@ -14,6 +14,6 @@ Imports: readr, MASS, matrixStats, ranger, doParallel, parallel,
 LinkingTo: Rcpp, RcppArmadillo
 Depends: R(>= 3.1)
 NeedsCompilation: yes
-Maintainer: Malavika Rajeev
+Maintainer: Malavika Rajeev <mrajeev@princeton.edu>
 Packaged: 2019-10-31 15:24:54 UTC; Louis
 Date/Publication: 2019-11-05 14:40:02 UTC
