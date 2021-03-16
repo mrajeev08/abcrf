@@ -85,6 +85,3 @@ out.regAbcrf <-
     data.table::data.table(resp, weights.std)
     
 } 
-
-out <-
-  function(...) UseMethod("out")
