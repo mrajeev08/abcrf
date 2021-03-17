@@ -2,7 +2,7 @@ covRegAbcrf.regAbcrf <-
 function(regForest1, regForest2, obs, training1, training2, 
          ntree=500, mtry=max(floor((dim(training1)[2]-1)/3), 1),
          sampsize=min(1e5, dim(training1)[1]), paral = FALSE, 
-         ncores = if(paral) max(detectCores()-1,1) else 1, paral.predict = FALSE,
+         ncores = 1, paral.predict = FALSE,
          ncores.predict = if(paral.predict) max(detectCores()-1,1) else 1, ... ){
   
   nSumstat1 <- dim(training1)[2]-1

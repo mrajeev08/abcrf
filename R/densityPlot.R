@@ -1,6 +1,6 @@
 densityPlot.regAbcrf <- 
 function(object, obs, training, add=TRUE, main="Posterior density", log="", xlim=NULL, ylim=NULL,
-         xlab=NULL, ylab=NULL, paral=FALSE, ncores= if(paral) max(detectCores()-1,1) else 1, ...)
+         xlab=NULL, ylab=NULL, paral=FALSE, ncores = 1, ...)
 {
     ### Checking arguments
     if (!inherits(object, "regAbcrf")) 

@@ -1,5 +1,5 @@
 predict.abcrf <- function(object, obs, training, ntree = 1000, sampsize = min(1e5,  object$model.rf$num.samples ), 
-                          paral = FALSE, ncores = if(paral) max(detectCores()-1,1) else 1,
+                          paral = FALSE, ncores = 1,
                           paral.predict = FALSE, ncores.predict = if(paral.predict) max(detectCores()-1,1) else 1 , ...)
 {
   if (!inherits(obs, "data.frame"))

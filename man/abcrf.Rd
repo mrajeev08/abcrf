@@ -12,7 +12,7 @@ to the values of the simulated summary statistics.
 }
 \usage{
 \method{abcrf}{formula}(formula, data, group=list(), lda=TRUE, ntree=500, sampsize=min(1e5, nrow(data)),
-paral=FALSE, ncores= if(paral) max(detectCores()-1,1) else 1, ...)
+paral=FALSE, ncores = 1, ...)
 }
 \arguments{
 \item{formula}{a formula: left of ~, variable representing
@@ -28,7 +28,7 @@ by default no grouping is done.}
 of the classification forest, by default the minimum between the number of elements of the reference table and 100,000.}
 \item{paral}{a boolean that indicates if the calculations of the classification random forest
 (forest used to assign a model to the observed dataset) should be parallelized.}
-\item{ncores}{the number of CPU cores to use. If paral=TRUE, it is used the number of CPU cores minus 1. If ncores is not specified and \code{\link{detectCores}} does not detect the number of CPU cores with success then 1 core is used.}
+\item{ncores}{the number of CPU cores to use. }
 \item{\dots}{additional arguments to be passed on to \code{\link{ranger}} used to construct the classification random forest that preditcs the selected model.}
 }
 \value{

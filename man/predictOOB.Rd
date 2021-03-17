@@ -13,14 +13,14 @@ Memory allocation issues might be encountered when the size of the training data
 }
 \usage{
 \method{predictOOB}{regAbcrf}(object, training, quantiles=c(0.025,0.975), paral = FALSE,
-ncores = if(paral) max(detectCores()-1,1) else 1,...)
+ncores = 1,...)
 }
 \arguments{
   \item{object}{a \code{\link{regAbcrf}} object.}
   \item{training}{the data frame containing the reference table used to train the \code{\link{regAbcrf}} object.}
   \item{quantiles}{numeric vector of probabilities with values in [0,1]. The default value is equal to \code{c(0.025, 0.975)}.}
   \item{paral}{a boolean that indicates if training data predictions should be parallelized or not.}
-  \item{ncores}{the number of CPU cores to use for the regression random forest predictions. If paral=TRUE, it is used the number of CPU cores minus 1. If ncores is not specified and \code{\link{detectCores}} does not detect the number of CPU cores with success then 1 core is used.}
+  \item{ncores}{the number of CPU cores to use for the regression random forest predictions. }
   \item{\dots}{optional arguments to be passed on to the function \code{\link{predict.ranger}}.}
 }
 

@@ -1,5 +1,5 @@
 regAbcrf.formula <- function(formula, data, ntree=500, mtry=max(floor((dim(data)[2]-1)/3), 1),
-                             sampsize=min(1e5, nrow(data)), paral=FALSE, ncores=if(paral) max(detectCores()-1,1) else 1, ...)
+                             sampsize=min(1e5, nrow(data)), paral=FALSE, ncores=1, ...)
 {
   
   if (!inherits(formula, "formula"))

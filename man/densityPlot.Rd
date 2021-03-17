@@ -10,7 +10,7 @@ Given a reg-ABC-RF object and a new value of the summary statistics,
 \method{densityPlot}{regAbcrf}(object, obs, training,
 add=TRUE, main="Posterior density", log="", xlim=NULL,
 ylim=NULL, xlab=NULL, ylab=NULL, paral=FALSE,
-ncores= if(paral) max(detectCores()-1,1) else 1, ...)
+ncores = 1, ...)
 }
 \arguments{
   \item{object}{a \code{\link{regAbcrf}} object.}
@@ -24,7 +24,7 @@ ncores= if(paral) max(detectCores()-1,1) else 1, ...)
   \item{xlab}{label of the abscissa.}
   \item{ylab}{label of the ordinate.}
   \item{paral}{a boolean that indicates if random forests predictions should be parallelized.}
-  \item{ncores}{the number of CPU cores to use for the regression random forest predictions. If paral=TRUE, it is used the number of CPU cores minus 1. If ncores is not specified and \code{\link{detectCores}} does not detect the number of CPU cores with success then 1 core is used.}
+  \item{ncores}{the number of CPU cores to use for the regression random forest predictions. }
   \item{\dots}{additional arguments to be passed on to \code{\link{density}}, as for example the smoothing bandwidth \code{bw} to be used.}
 }
 \references{

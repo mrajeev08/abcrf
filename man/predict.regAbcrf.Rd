@@ -10,7 +10,7 @@ computed at an higher computational price.
 }
 \usage{
 \method{predict}{regAbcrf}(object, obs, training, quantiles=c(0.025,0.975),
-paral = FALSE, ncores = if(paral) max(detectCores()-1,1) else 1, rf.weights = FALSE,
+paral = FALSE, ncores = 1, rf.weights = FALSE,
 post.err.med = FALSE, ...)
 }
 \arguments{
@@ -19,7 +19,7 @@ post.err.med = FALSE, ...)
   \item{training}{the data frame containing the reference table used to train the \code{\link{regAbcrf}} object.}
   \item{quantiles}{numeric vector of probabilities with values in [0,1]. The default value is equal to \code{c(0.025, 0.975)}.}
   \item{paral}{a boolean that indicates if random forests predictions should be parallelized.}
-  \item{ncores}{the number of CPU cores to use for the regression random forest predictions. If paral=TRUE, it is used the number of CPU cores minus 1. If ncores is not specified and \code{\link{detectCores}} does not detect the number of CPU cores with success then 1 core is used.}
+  \item{ncores}{the number of CPU cores to use for the regression random forest predictions. }
   \item{rf.weights}{a boolean that indicates if the random forest weights used to predict quantities of interest should we returned. The default value is FALSE.}
   \item{post.err.med}{a boolean that indicates if posterior errors based on posterior medians should be computed. The default value is FALSE. If computed, this function might take a much more time.}
   \item{\dots}{optional arguments to be passed on to the function \code{\link{predict.ranger}}.}

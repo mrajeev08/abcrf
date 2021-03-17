@@ -1,5 +1,5 @@
 err.regAbcrf <- function(object, training, paral = FALSE,
-                         ncores = if (paral) max(detectCores() - 1, 1) else 1,
+                         ncores = 1,
                          what = "mean",
                          plot = FALSE) {
   

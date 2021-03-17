@@ -1,5 +1,5 @@
 predictOOB.regAbcrf <- function(object, training, quantiles=c(0.025,0.975),
-                             paral = FALSE, ncores = if(paral) max(detectCores()-1,1) else 1,...)
+                                paral = FALSE, ncores = 1,...)
 {
   ### Checking arguments
   
@@ -136,9 +136,6 @@ predictOOB.regAbcrf <- function(object, training, quantiles=c(0.025,0.975),
     }
     
   } else {
-
-  cl <- makeCluster(ncores)
-  registerDoParallel(cl)
   
     info.store <- foreach(idxLoop=1:nobs, .combine='rbind') %dopar% {
       
@@ -212,8 +209,6 @@ predictOOB.regAbcrf <- function(object, training, quantiles=c(0.025,0.975),
       
     }
       
-    stopCluster(cl)
-    
     esper <- info.store[,1,drop=FALSE]
     medianeFinal <- info.store[,2,drop=FALSE]
     variance <- info.store[,3,drop=FALSE]

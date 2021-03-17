@@ -1,6 +1,6 @@
 abcrf.formula <- function(formula, data, group = list(), lda = TRUE, ntree = 500,
                           sampsize = min(1e5, nrow(data)), paral = FALSE,
-                          ncores = if (paral) max(detectCores() - 1, 1) else 1, ...) {
+                          ncores = 1, ...) {
 
   # formula and data.frame check
 
